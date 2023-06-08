@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("*******Ejercicio 1***********");
+        var ax = 2;
+        var ay = 3;
+        var bx = 6;
+        var by = 9;
+
+        function x() { // Distancia entre dos puntos (hipotenusa)
+
+            var h = (bx - ax);
+            var v = (by - ay);
+            h = h * h;
+            v = v * v;
+            var n = Math.sqrt(h + v); //7.211102550927978
+
+            console.log("X es " + n); // X es 7.211102550927978
+        }
+
+        x();
+
+        //******************************
+        console.log("************Ejercicio 2***********")
+    
+        function x(y) { // Conversor de fechas
+            var n = Math.floor(y / 365); //6 
+            var m = y % 365; //155
+            var z = Math.floor(m / 30); //5
+            m = m % 30; // 5
+            console.log("??? " + n + " N, " + z + " Z y " + m + " días.");
+            // ??? 6 N, 5 Z y 5 días.
+        }
+        x(2345)
+        
+    </script>
+</body>
+
+</html>

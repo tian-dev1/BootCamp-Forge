@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("*******Ejercicio 1***********");
+
+        var a = 100;
+        var cadena = "";
+        function repetirNumero(numero) {
+            for (let i = 0; i < numero; i++) {
+                cadena += numero;
+            }
+            return cadena;
+        }
+        repetirNumero(a);
+        console.log("La cadena de números es: " + cadena);
+        
+        // ************************************************
+        console.log("*******Ejercicio 2***********");
+
+        function resultadoNota(nota) {
+            if (Number(nota) == nota) {
+                if (nota > 0 && nota <= 10) {
+                    if (nota < 3) {
+                        console.log("Muy deficiente");
+                    }
+                    else if (nota < 5) {
+                        console.log("Insuficiente");
+                    }
+                    else if (nota < 6) {
+                        console.log("Suficiente");
+                    }
+                    else if (nota < 7) {
+                        console.log("Bien");
+                    }
+                    else if (nota < 9) {
+                        console.log("Notable");
+                    }
+                    else if (nota >= 9) {
+                        console.log("Sobresaliente");
+                    }
+                }
+                else {
+                    console.log("Nota errónea");
+                }
+            }
+            else {
+                if (nota != undefined) {
+                    console.log("Introduce una nota válida");
+                }
+            }
+        }
+
+        resultadoNota(4.5)  //Insuficiente
+        resultadoNota(9)    //Sobresaliente
+        resultadoNota("A")  //Introduce una nota válida
+        resultadoNota(11)   //Nota errónea
+        resultadoNota(-1)   //Nota errónea
+
+// ************************************************
+        console.log("*******Ejercicio 3***********");
+
+        function numeroPasos(numero) {
+            var pasos = 0;
+            while (numero >= 1) {
+                if (numero % 2 == 1 && numero > 1) { 
+                    numero--; 
+                    pasos++;  
+                }
+                pasos++;    
+                numero /= 2;
+            }
+            return pasos;
+        }
+        var pasos = numeroPasos(23);
+        console.log("Se necesitaron: " + pasos + " pasos para llegar a 0");
+
+    </script>
+</body>
+
+</html>
