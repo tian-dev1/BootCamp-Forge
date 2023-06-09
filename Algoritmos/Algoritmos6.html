@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Crear una función para recorrer un arreglo y a cada número impar sumarle 1, imprimir el arreglo y determinar cuántos números impares estaban dentro del arreglo, retornar el número de elementos.
+            // Entrada:
+            //     [2,6,87,43,68,8,4,32,6,57,91,12]
+            // Salida
+            //     [2,6,88,44,68,8,4,32,6,58,92,12]
+            //     Impares: 4
+            console.log("****** Ejercicio1 *****");
+            var arr =  [2,6,87,43,68,8,4,32,6,57,91,12];
+            function retornarCantidadDeImpares(arr){
+                var cantidadImpares = 0;
+                for(var i = 0; i < arr.length; i++){
+                    if(arr[i] % 2 == 1){
+                        //Es impar
+                        arr[i] = arr[i]+1;
+                        cantidadImpares++;
+                    }
+                }
+                console.log(arr);
+                return "Impares: " + cantidadImpares;
+            }
+            console.log(retornarCantidadDeImpares(arr));
+
+        // 2. Crear una función para recorrer un arreglo y retornar el número de elementos que tienen una longitud mayor o igual a 6.
+            // Entrada:
+            //     String[] nombres = ["Manzana", "Pera", "Banano", "Melocoton"]
+            // Salida
+            //     Longitud mayor a 6: 3 elementos.
+            console.log("****** Ejercicio2 *****");
+            var nombres = ["Manzana", "Pera", "Banano", "Melocoton"];
+            function retornarCantidadElementos(arr){
+                var cantidad = 0;
+                for(var i =0; i<arr.length; i++){
+                    if(arr[i].length >= 6){
+                        cantidad++
+                    }
+                }
+                
+                return `Existe ${cantidad} elmentos con longitud mayor o igual a 6`;
+
+            }
+            console.log(retornarCantidadElementos(nombres));
+
+        // 3. Generar un algoritmo para sumar un arreglo, retornar el resultado.
+            // Entrada:
+            //     [2,6,87,43,68,8,4,32,6,57,91,12]
+            // Salida
+            //     416
+            console.log("****** Ejercicio3 *****");
+            var arr = [2,6,87,43,68,8,4,32,6,57,91,12];
+            function sumarArray(arr){
+                var suma = 0;
+                for(var i =0; i<arr.length; i++){
+                    suma += arr[i];
+                }
+                return suma;
+            }
+            console.log(sumarArray(arr));
+
+
+
+        // 4. Crear un algoritmo para encontrar la palabra más larga.
+            // Entrada:
+            //     String[] frutas = ["Manzana", "Pera", "Banano", "Melocoton"]
+            // Salida
+            //     Melocoton
+            console.log("****** Ejercicio4 *****");
+            var arr = ["Manzana", "Pera", "Banano", "Melocoton"];
+            function palabraMasLarga(arr){
+                var palabraMayor = "";
+                for(var i =0; i<arr.length; i++){
+                    if(arr[i].length > palabraMayor.length){
+                        palabraMayor = arr[i];
+                    }
+                }
+                return palabraMayor;
+            }
+            console.log(palabraMasLarga(arr));
+
+    </script>
+</body>
+</html>

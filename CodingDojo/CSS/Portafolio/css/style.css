@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 970px;
+    font-family: 'circular';
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+#title{
+    font-family: cursive;
+}
+#subtitle{
+    font-family: 'circular';
+}
+#main{
+    background: rgb(98,77,87);
+    background: radial-gradient(circle, rgba(98,77,87,1) 0%, rgba(31,15,20,1) 100%, rgba(0,212,255,1) 100%, rgba(0,212,255,1) 100%);
+    padding-bottom: 20px;
+}
+#aside{
+    padding: 20px;
+    display: flex;
+}
+#imagen-perfil{
+    width: 500px;
+    height: 290px;
+    border: 5px solid #c0c0c0;
+    margin-right: 15px;
+}
+#about{
+    margin-left: 15px;
+}
+.title-about, .title-technologies{
+    color: white;
+    background-color: #878693;
+    padding: 10px;
+}
+.paragraph-group{
+    background-color: white;
+    padding: 10px;
+}
+.paragraph{
+    margin-bottom: 10px;
+}
+#link{
+    color: black;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+#section{
+    margin:  0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.article{
+    background-color: white;
+    width: 300px;
+}
+.image-article{
+    width: 100%;
+}
+.paragraph-article{
+    margin: 10px;
+    min-height: 200px;
+}
+
+.container-technologies{
+    padding-bottom: 20px;
+}
+
+.container-image-technologies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-technologies{
+    width: 40px;
+    margin: 8px;
+}
+.container-boton-technologies{
+    display: flex;
+    justify-content: center;
+}
+.boton{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #407d61;
+    text-decoration: none;
+    color: white;
+    border: 1px solid 
+    #234e3b;
+}
+#footer{
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-social{
+    margin: 10px;
+    text-decoration: none;
+}
+.container-social{
+    display: flex;
+    align-items: center;
+}
+.image-social{
+    width: 20px;
+}
+.text-social{
+    color: black;
+    margin: 0 5px;
+}
+

@@ -1,0 +1,54 @@
+/* body *{
+    outline: 1px solid pink;
+} */
+.container{
+    width: 980px;
+    min-height: 800px;
+    background-color: blue;
+    margin: 0 auto;
+}
+.container .top{
+    min-height: 100px;
+    background-color: red;
+}
+.container .top .image{
+    width: 400px;
+    display: inline-block;
+}
+.container .top ul{
+    display: inline-block;
+}
+.container .top ul li{
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px;
+}
+.container h1{
+    text-align: center;
+}
+
+.container .bottom{
+    min-height: 400px;
+    background-color: green;
+}
+.container .bottom .message{
+    display: inline-block;
+    vertical-align: top;
+    width: 290px;
+    margin: 5px;
+    padding: 10px;
+    background-color: pink;
+    min-height: 300px;
+    text-align: center;
+}
+.container .message .image{
+    height: 80px;
+}
+.container .message a{
+    display: block;
+    background-color: orange;
+    padding: 10px;
+    border: 1px solid black;
+    color: white;
+    text-decoration: none;
+}
