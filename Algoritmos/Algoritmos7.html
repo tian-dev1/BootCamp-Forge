@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos</title>
+</head>
+<body>
+    <script>
+        // 1. dadas 2 cadenas de caracteres retornar el numero index del caracter que falta y mostrar la posición y el caracter
+        function comparación(string1, string2){
+            var palabraMasLarga = "";
+            if(string1.length > string2.length){
+                palabraMasLarga = string1;
+                for(var i = 0; i<palabraMasLarga.length; i++){
+                    if(palabraMasLarga[i] != string2[i]){
+                        consooe.log(`Falta la letra ${palabraMasLarga[i]} en la posición ${i}` )
+                    }
+                    
+                }
+            }else if(string2.length > string1.length){
+                palabraMasLarga = string2;
+            }else{
+                palabraMasLarga = string1;
+            }
+            
+        }
+    </script>
+</body>
+</html>

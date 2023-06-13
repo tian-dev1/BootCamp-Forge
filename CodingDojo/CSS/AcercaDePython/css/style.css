@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 970px;
+    background-color: #245076;
+    font-family: 'circular';
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 20px;
+}
+#logo-image{
+    width: 300px;
+    padding-left: 15px;
+}
+.text-initial{
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.text-highlighted{
+    color: #d2b100;
+    margin:  0 5px;
+    text-decoration: underline;
+}
+
+.container-search{
+    display: inline-block;
+    padding:  20px 30px;
+    background-color: #444444;
+    border-radius: 20px;
+}
+
+#input-text{
+    height: 30px;
+}
+
+#input-button{
+    background-color: #245076;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.wrapper{
+    padding: 0 10% 20px 10%;
+
+}
+
+#nav{
+    background-color: #447dad;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    vertical-align:auto
+
+}
+.list-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-list{
+    display: inline;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+}
+
+.item-list:hover{
+    background-color: #245076;
+    cursor: pointer;
+}
+
+#aside{
+    display: flex;
+    margin: 10px 50px;
+    color: white;
+}
+
+.list-aside{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 150px;
+    
+}
+.list-aside li{
+    margin-bottom: 10px;
+    color: #d2b100;
+}
+
+.link{
+    color: white;
+}
+.center{
+    text-align: center;
+}
+.phrases{
+    color: yellow;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+}
+.divider{
+    border: 1px solid 
+    #183753;
+}
+.information{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    padding: 10px 10% 20px 10%;
+}
+.information-section{
+    border-top: 3px solid #73a7d5;
+    margin: 10px;
+    padding-right: 50px;
+}
+.highlighted{
+    color: #73a7d5;
+}
+.information-list{
+    margin: 0 50px;
+    color: black;
+    list-style-type: square;
+}
+.text-list{
+    color: #7aabd7;
+}
+.footer-information{
+    padding: 30px 0 5px 0;
+}
+.footer-information-container{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-information-text{
+    color: #87b9e5;
+    margin: 10px 30px;
+}
+.small{
+    font-size: 10px;
+}
