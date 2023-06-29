@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Crear una función que reverse una cadena de caracteres. No utilizar las funciones predefinidas del lenguaje.
+        // Ejemplo:
+        // - Entrada
+        // "ojoD gnidoC"
+
+        // -Salida
+        // "Coding Dojo"
+
+
+
+
+        // Crear un algoritmo que devuelva el mayor valor de un arreglo.
+        // Ejemplo:
+        // arr = [1, 3, 5, 2]
+
+        // -Salida
+        // 5
+        arr = [1, 3, 5, 2, 0, 9];
+        function ValorMayor(arr){
+            var numeroMayor = 0;
+            for(var i = 0; i<arr.length; i++){
+                if(arr[i] > numeroMayor){
+                    numeroMayor = arr[i];
+                }
+            }
+            return numeroMayor;
+        }
+        
+        //console.log(ValorMayor(arr));
+
+        // // BONUS. ************************************************
+        // Crear un algoritmo que devuelva el segundo número mayor valor del arreglo.
+        // Ejemplo:
+        // arr = [-7, -1, -5, -3]
+
+        function findSecondLargestNumber(array) {
+  
+        let primerMayor = array[0]; // Initialize the largest number
+        let segundoMayor = null; // Initialize the second largest number as null
+
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > primerMayor) {
+                segundoMayor = primerMayor;
+                primerMayor = array[i];
+            }
+        }
+
+        return  segundoMayor;
+        }
+
+        array = [-7, -1, -5, -3];
+        console.log(findSecondLargestNumber(array));
+
+        // -Salida
+        // -3
+    </script>
+</body>
+</html>

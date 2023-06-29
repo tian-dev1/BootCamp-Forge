@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.row-header{
+    background-color: #343a40;
+}
+.column-header{
+    background-color:#46a3b8;
+}
+#aside{
+    background-color: #46a3b8;
+}
+#main{
+    background-color:#f4c109;
+}
+.articles{
+    background-color: #fff;
+    margin:  20px 1px;
+}
+#footer{
+    background-color:#3ca745;
+}
