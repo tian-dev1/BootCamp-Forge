@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Básicos 1</title>
+</head>
+<body>
+    <script>
+        console.log("*******Ejercicio 1***********");
+        function GetNumbersFrom1To255(){
+            for(var i = 0; i<=255; i++){
+                console.log(i);
+            }
+        }
+        GetNumbersFrom1To255();
+
+        console.log("*******Ejercicio 2***********");
+        function SumOfPairsUpTo1000(){
+            let suma = 0;
+            for(var i = 0; i<=1000; i++){
+                if(i % 2 == 0){
+                    suma += i;
+                }
+            }
+            return suma;
+        }
+        console.log(SumOfPairsUpTo1000());
+
+        console.log("*******Ejercicio 3***********");
+        function SumOfOddNumbersUpTo5000(){
+            let suma = 0;
+            for(var i = 0; i<=5000; i++){
+                if(i % 2 == 1){
+                    suma += i;
+                }
+            }
+            return suma;
+        }
+        console.log(SumOfOddNumbersUpTo5000());
+
+        console.log("*******Ejercicio 4***********");
+        array = [2,4,6,8,10];
+        function SumOfArray(array){
+            let suma = 0;
+            for(var i=0; i<array.length; i++){
+                suma += array[i];
+            }
+            return suma;
+        }
+        console.log(SumOfArray(array));
+
+        console.log("*******Ejercicio 5***********");
+        array = [3,18,6,15,9,30,12,1,25];
+        function SearchGreaterValue(array){
+            let higherValue = 0; 
+            for(var i=0; i<array.length; i++){
+                if(array[i] > higherValue){
+                    higherValue = array[i];
+                }
+
+            }
+            return higherValue;
+        }
+        console.log(SearchGreaterValue(array));
+
+        console.log("*******Ejercicio 6***********");
+        array = [2,4,6,8,10,12];
+        function GetAverage(array){
+            let suma = 0;
+            let promedio = 0;
+            for(var i=0; i<array.length; i++){
+                suma += array[i];
+            }
+            promedio = suma/array.length;
+            return promedio;
+        }
+        console.log(GetAverage(array));
+
+        console.log("*******Ejercicio 7***********");
+        function getOdd(){
+            let arrayResult = [];
+            for(var i=0; i<50; i++){
+                if(!(i % 2 == 0)){
+                    //impar
+                    arrayResult.push(i); 
+                }
+            }
+            return arrayResult;
+        }
+        console.log(getOdd());
+        
+        console.log("*******Ejercicio 8***********");
+         var arr = [1,3,5,7];
+        function numberGreater(array, num){
+            let mayores = [];
+            for(var i =0; i<array.length; i++){
+                if(array[i] > num){
+                    mayores.push(array[i]);
+                }
+            }
+            console.log(`Hay ${mayores.length} números en el array mayores que ${num}, esto son: ${mayores}`);
+            return mayores.length;
+        }
+        numberGreater(arr, 3);
+
+        console.log("*******Ejercicio 9***********");
+        let exercise9 = [1,5,10,-2];
+        arrayResult = [];
+        function getSquaredValue(array){
+            for(var i=0; i<array.length; i++){
+                var value = array[i] * array[i];
+                arrayResult.push(value);
+            }
+            return arrayResult;
+        }
+        console.log(getSquaredValue(exercise9));
+
+        console.log("*******Ejercicio 10***********");
+        let exercise10 = [1,5,10,-2];
+        function convertValuesNegativeToZero(array){
+            for(var i = 0; i<array.length; i++){
+                array[i] < 0 ? array[i] = 0 : null;
+            }
+            return array;
+        }
+        console.log(convertValuesNegativeToZero(exercise10));
+
+
+        console.log("*******Ejercicio 11***********");
+        let exercise11 = [1,5,10,-2];
+        function getMaxMinAvgValues(array){
+            let arrayResult = [];
+            let max = 0, sum = 0, avg = 0;
+            let min = array[0];
+            for(var i =0; i<array.length; i++){
+                if(array[i] > max){
+                    max = array[i];
+                }else if(array[i] < min){
+                    min = array[i];
+                }
+                sum += array[i];
+            }
+            avg = sum/array.length
+            arrayResult.push(max, min, avg);
+            return arrayResult;
+        }
+        console.log(getMaxMinAvgValues(exercise11));
+
+        console.log("*******Ejercicio 12***********");
+        let exercise12 = [1,5,10,-2];
+        function changeFirtsAndLastValue(array){
+            if(array.length < 2){
+                console.log("La extensión mínima predeterminada del array es 2");
+            }else{
+                let firstValue = array[0];
+                let lastValue = array[array.length-1];
+                array[0] = lastValue;
+                array[array.length-1] = firstValue;
+            }
+            return array;
+        }
+        console.log(changeFirtsAndLastValue(exercise12));
+
+        console.log("*******Ejercicio 13***********");
+        let exercise13 = [-1,-3,2];
+        function convertNegativeValues(array){
+            for(var i=0; i<array.length; i++){
+                if(array[i] < 0){
+                    array[i] = 'Dojo';
+                }
+            }
+            return array;
+        }
+        console.log(convertNegativeValues(exercise13));
+    </script>
+
+</body>
+</html>
