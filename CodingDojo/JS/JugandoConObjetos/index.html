@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugando con objetos</title>
+</head>
+<body>
+        <p id="primer"></p>
+        <p id="segundo"></p>
+        <p>3. ¿Cómo harías print/log del nombre y la edad de cada usuario utilizando un for loop?</p>
+        <ul id="tercero">
+        </ul>
+        <p>4. ¿Cómo harías para imprimir el nombre de los mayores de edad?</p>
+        <ul id="cuarto">
+            
+        </ul>
+    <script>
+        var users = [{name: "Michael", age:12}, {name: "John", age:30}, {name: "David", age:27}];
+        var body = document.body; 
+        // 1. ¿Cómo harías print/log de la edad de John?
+        var elemento1 = document.getElementById('primer');
+        elemento1.innerHTML = `1. Edad de John: <strong>${users[1].age}</strong>`;
+        // 2. ¿Cómo harías print/log del nombre del primer objeto?
+        var elemento2 = document.getElementById('segundo');
+        elemento2.innerHTML = `2. El nombre del primer objeto es: <strong>${users[0].name}</strong>`
+        // 3. ¿Cómo harías print/log del nombre y la edad de cada usuario utilizando un for loop?
+        var elemento3 = document.getElementById('tercero');
+        for( var i=0; i<users.length; i++){
+            elemento3.innerHTML += `<li>${users[i].name} - ${users[i].age}</li>`
+        }
+        // 4. ¿Cómo harías para imprimir el nombre de los mayores de edad?
+        var elemento3 = document.getElementById('cuarto');
+        for( var i=0; i<users.length; i++){
+            if(users[i].age >= 18){
+                elemento3.innerHTML += `<li>${users[i].name} - ${users[i].age}</li>`
+            }
+        }
+    </script>
+</body>
+</html>
