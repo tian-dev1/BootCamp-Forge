@@ -1,0 +1,110 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`habilidades`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`habilidades` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `creado_el` DATE NOT NULL,
+  `actualizado_el` DATE NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Paises`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Paises` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `creado_el` DATE NOT NULL,
+  `actualizado_el` DATE NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`ciudades`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`ciudades` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `creado_el` DATE NOT NULL,
+  `actualizado_el` DATE NOT NULL,
+  `Paises_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_ciudades_Paises1_idx` (`Paises_id` ASC) VISIBLE,
+  CONSTRAINT `fk_ciudades_Paises1`
+    FOREIGN KEY (`Paises_id`)
+    REFERENCES `mydb`.`Paises` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`dojos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`dojos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `barrio` VARCHAR(45) NOT NULL,
+  `creado_el` DATE NOT NULL,
+  `actualizado_el` DATE NOT NULL,
+  `ciudades_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE,
+  INDEX `fk_dojos_ciudades1_idx` (`ciudades_id` ASC) VISIBLE,
+  CONSTRAINT `fk_dojos_ciudades1`
+    FOREIGN KEY (`ciudades_id`)
+    REFERENCES `mydb`.`ciudades` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`ninjas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`ninjas` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `creado_el` DATE NOT NULL,
+  `actualizado_el` DATE NOT NULL,
+  `habilidades_id` INT NOT NULL,
+  `dojos_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_ninjas_habilidades_idx` (`habilidades_id` ASC) VISIBLE,
+  INDEX `fk_ninjas_dojos1_idx` (`dojos_id` ASC) VISIBLE,
+  CONSTRAINT `fk_ninjas_habilidades`
+    FOREIGN KEY (`habilidades_id`)
+    REFERENCES `mydb`.`habilidades` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ninjas_dojos1`
+    FOREIGN KEY (`dojos_id`)
+    REFERENCES `mydb`.`dojos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
