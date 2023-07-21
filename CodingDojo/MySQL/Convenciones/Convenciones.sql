@@ -13,6 +13,6 @@
 Normalización:
     Primera regla: Todas la tablas debe tener un id o clave primaria y cada campo debe contener 1 solo valor
     Segunda regla: Cada columna de la tabla debe cumplir con el propósito de dicha tabla, y para esto debemos hacer que cada campo depende del ID de la tabla
-    Tercera regla: Los datos no deben ser transitivos (Datos repetidos en una tabla deben sacar se a tabla aparte usuario->ciudad)
+    Tercera regla: Los datos no deben ser transitivos (Datos repetidos en columna de la tabla deben sacar se a tabla aparte usuario->ciudad)
 
 */
