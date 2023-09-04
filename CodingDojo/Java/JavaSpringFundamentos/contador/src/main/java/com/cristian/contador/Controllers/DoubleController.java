@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-public class ResultsCtrl {
-    @RequestMapping("/counter")
-	public String results(HttpSession session) {
+public class DoubleController {
+    @RequestMapping("/double")
+	public String dubs(HttpSession session) {
 		if (session.getAttribute("count") == null) {
 			session.setAttribute("count", 0);
 		}
         Integer count = (Integer) session.getAttribute("count");
-		count += 1;
+		count += 2;
 		session.setAttribute("count", count);
-		return "/Counter/results.jsp";
-	}
+		return "double";
+	}   
 }
